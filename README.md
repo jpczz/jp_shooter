@@ -1,4 +1,4 @@
-# Smart Shooter API Interface
+# JP Shooter API Interface
 
 Este script fornece uma interface de linha de comando para controlar câmeras conectadas ao Smart Shooter através de requisições via ZMQ. Ele permite iniciar e parar gravações de vídeo, além de baixar as gravações automaticamente.
 
@@ -20,7 +20,7 @@ Iniciar gravação de vídeo:
 
 Para iniciar a gravação de vídeo, utilize o parâmetro --start. Opcionalmente, você pode especificar o tempo de gravação com --time para parar a gravação automaticamente após o tempo definido.
 
-  python smart_shooter.py --start --time 10
+  python jp_shooter.py --start --time 10
 
 O exemplo acima inicia a gravação de vídeo e a para automaticamente após 10 segundos.
 
@@ -28,13 +28,13 @@ Parar gravação de vídeo:
 
 Se a gravação foi iniciada sem um tempo definido, você pode pará-la manualmente com o parâmetro --stop.
 
-  python smart_shooter.py --stop
+  python jp_shooter.py --stop
 
 Baixar o vídeo gravado:
 
 Para baixar o vídeo após a gravação, utilize o parâmetro --download. O caminho padrão para salvar os vídeos é definido pelo Smart Shooter.
 
-  python smart_shooter.py --start --time 10 --download
+  python jp_shooter.py --start --time 10 --download
 
 O exemplo acima inicia a gravação de vídeo, a para após 10 segundos, e então baixa o vídeo gravado para o diretório.
 
@@ -42,7 +42,7 @@ Gravação contínua:
 
 Se você quiser gravar vídeos continuamente, utilize o parâmetro --loop. Você pode interromper a gravação contínua a qualquer momento pressionando Ctrl+C.
 
-  python smart_shooter.py --start --loop
+  python jp_shooter.py --start --loop
 
 Parâmetros disponíveis:
 
@@ -54,7 +54,7 @@ Parâmetros disponíveis:
 
 Exemplo de uso:
 
-  python smart_shooter.py --start --time 15 --download
+  python jp_shooter.py --start --time 15 --download
 
 Este comando irá:
 
