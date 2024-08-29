@@ -121,16 +121,15 @@ def main():
                     if args.start:
                         video_recording_result = start_video_recording(req_socket, camera_key)
                         if video_recording_result["msg_result"]:
-                            print("Gravação de vídeo iniciada com sucesso")
+                            print("rec_start")
 
                             if args.time:
-                                print(f"Gravação de vídeo será interrompida automaticamente após {args.time} segundos")
                                 time.sleep(args.time)
                                 stop_result = stop_video_recording(req_socket, camera_key)
                                 if stop_result["msg_result"]:
-                                    print("Gravação de vídeo interrompida automaticamente após o tempo especificado")
+                                    print("rec_stop")
                                     if args.download:
-                                        print("Download da gravação iniciado")
+                                        print("down_start")
                                         # Definindo o caminho de download
                                         download_path = os.path.join("videos", "shooter")
                                         os.makedirs(download_path, exist_ok=True)
@@ -138,7 +137,7 @@ def main():
                                         # Baixando o vídeo
                                         download_result = download_video(req_socket, camera_key, download_path)
                                         if download_result["msg_result"]:
-                                            print(f"Vídeo baixado com sucesso")
+                                            print(f"down_done")
                                         else:
                                             print("Falha ao baixar o vídeo")
                                 else:
